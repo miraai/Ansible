@@ -19,6 +19,7 @@
     name: jenkins
     enablerepo: jenkins
     state: present
+  become: True
 
 - name: Start Jenkins
   service:

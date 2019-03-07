@@ -1,0 +1,15 @@
+---
+# tasks file for java
+
+- name: Install default jre
+  apt:
+    name: default-jre
+    state: present
+    update_cache: yes
+  become: True
+
+- name: Install default jdk
+  apt:
+    name: openjdk-8-jdk
+    state: present
+    update_cache: yes

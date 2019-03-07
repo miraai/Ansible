@@ -4,4 +4,5 @@
   become: True
   roles:
     - nodejs
+    - java
     - jenkins
