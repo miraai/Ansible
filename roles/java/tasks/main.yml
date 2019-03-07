@@ -1,15 +1,15 @@
 ---
 # tasks file for java
 
-- name: Install default jre
-  apt:
-    name: default-jre
+- name: Install Java 8
+  yum:
+    name: java-1.8.0
     state: present
     update_cache: yes
   become: True
 
-- name: Install default jdk
-  apt:
-    name: openjdk-8-jdk
-    state: present
+- name: Remove Java 7
+  yum:
+    name: java-1.7.0-openjdk
+    state: absent
     update_cache: yes
