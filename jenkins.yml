@@ -1,0 +1,7 @@
+---
+
+- hosts: "{{ target | default('localhost') }}"
+  become: True
+  roles:
+    - nodejs
+    - jenkins
